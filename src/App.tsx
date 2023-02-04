@@ -1,9 +1,14 @@
+//app framework
 import { useState } from 'react';
+//styling
 import './App.css';
-import Cat from './data/cat';
 import Navbar from './components/navbar';
 import Header from './components/header';
 import Footer from './components/footer';
+//data
+import Cat from './data/cat';
+import CatCard from './components/cat_card'
+
 
 function App(): JSX.Element {
 
@@ -86,7 +91,6 @@ function App(): JSX.Element {
 		 ]
 	);
 
-	console.log("Our pretties 😻: ", cats);
 
 	return (
 		<>
@@ -95,6 +99,21 @@ function App(): JSX.Element {
 			<main>
 			
 			</main>
+			  <div className='cards__wrapper'>
+				{/* JSX code can go here */}
+
+				<details>
+				  <summary>Click here to see the answer</summary>
+				<pre>
+
+				  <CatCard />
+
+
+				</pre>  	
+				</details>
+
+
+			  </div>
 
 			<Footer />
 		</>
