@@ -34,7 +34,7 @@ Runs the app in the development mode.
 
 The app should open in your browser.
 
-If the page doesn't open automatically, you can open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+If the page doesn't open automatically, you can open [http://localhost:3000](http://localhost:3000](http://localhost:3000)) to view it in the browser.
 
 The page will reload if you make edits 👍
 

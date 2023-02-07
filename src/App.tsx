@@ -1,13 +1,14 @@
 //app framework
 import { useState } from 'react';
+import Cat from './data/cat';
+import CatCard from './components/cat_card';
 //styling
 import './App.css';
 import Navbar from './components/navbar';
 import Header from './components/header';
 import Footer from './components/footer';
 //data
-import Cat from './data/cat';
-import CatCard from './components/cat_card';
+
 
 
 function App(): JSX.Element {
@@ -15,7 +16,7 @@ function App(): JSX.Element {
 	// JavaScript/TypeScript code can be inserted here!
 
    /*Initial state is a big 'cats' array with the cat card shape */
-	const [ cats, setCats ] = useState<Array<Cat>> (
+	const [ cats, setCats ] = useState <Array<Cat>> (
 		[
 			{
 				name: 'Little Miss Purrfect',
@@ -98,17 +99,20 @@ function App(): JSX.Element {
 			<Navbar />
 			<Header />
 			<main>
+                
+			     <div className='cards__wrapper'> 
 
-			     <div className='cards__wrapper'>
+				        { cats.map (cat => 
+						    <CatCard/>)
+						};	
+				</div>
+				
 
-				        { cats.map (cat => <CatCard/> )};
-
-			     </div>
-			
 			</main>
 			  
 			<Footer />
 		</>
+
 	);
 }
 
