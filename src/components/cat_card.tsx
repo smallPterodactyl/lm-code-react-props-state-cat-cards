@@ -1,4 +1,4 @@
-import Cat from '../data/cat';
+//import Cat from '../data/cat';
 
 //This is the interface used to render whatever is in
 // props and CatCard. Props is the data, CatCard delivers it.
@@ -6,7 +6,7 @@ import Cat from '../data/cat';
 
 const CatCard : React.FC<CatCardProps> = (props) => (
 
-  /*<div className="card">
+  <div className="card">
     <h3 className= "card__text  card__header" >{props.name}</h3>
       <p className= "card__text" >{props.species}</p>
       <p className= "card__text">{props.favFoods}</p>
@@ -22,8 +22,8 @@ const CatCard : React.FC<CatCardProps> = (props) => (
     birthYear: number;
   } 
 
-  */
-
+  
+/*
   <div className="card">
     <h3 className= "card__text  card__header" >{props.catObject.name}</h3>
       <p className= "card__text" >{props.catObject.species}</p>
@@ -39,6 +39,8 @@ const CatCard : React.FC<CatCardProps> = (props) => (
   interface CatCardProps {
     catObject:Cat;
   }
+  */
+
   
 
 export default CatCard;
