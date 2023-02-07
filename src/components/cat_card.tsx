@@ -1,9 +1,11 @@
 //import Cat from '../data/cat';
 
+import CatImage from "./cat_image";
+import cat1 from "../assets/images/cat1.jpg";
+
 //This is the interface used to render whatever is in
 // props and CatCard. Props is the data, CatCard delivers it.
 // Props is a single interface that could be called anything.
-
 const CatCard : React.FC<CatCardProps> = (props) => (
 
   <div className="card">
@@ -11,6 +13,7 @@ const CatCard : React.FC<CatCardProps> = (props) => (
       <p className= "card__text" >{props.species}</p>
       <p className= "card__text">{props.favFoods}</p>
       <p className="card__text">{props.birthYear}</p>
+      <CatImage catImg={cat1} altText="A lovely cat"/>
 
   </div>
 )
