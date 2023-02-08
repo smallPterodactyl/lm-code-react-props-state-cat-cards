@@ -122,7 +122,9 @@ const CatCard : React.FC<CatCardProps> = (props) => (
       <p className= "card__text" >{props.species}</p>
       <p className= "card__text">{props.favFoods}</p>
       <p className="card__text">{props.birthYear}</p>
-      <CatImage 
+      {//Only render if there is an image
+        props.catIndex < images.length && (
+        <CatImage 
             image={images[props.catIndex].image} 
             altText={images[props.catIndex].altText}
             licenceType={images[props.catIndex].licenceType}
@@ -130,6 +132,7 @@ const CatCard : React.FC<CatCardProps> = (props) => (
             attributionName={images[props.catIndex].attributionName}
             attributionUrl={images[props.catIndex].attributionUrl}
             />
+        )}    
 
   </div>
 )
