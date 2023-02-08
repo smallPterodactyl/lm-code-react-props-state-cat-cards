@@ -90,11 +90,13 @@ function App(): JSX.Element {
 		 ]
 	);
 
+	const catCount:number = cats.length;
+
 	return (
 		<>
 		    
 			<Navbar />
-			<Header />
+			<Header catCount={catCount}/>
 			<main>
                 
 			     <div className='cards__wrapper'> 
