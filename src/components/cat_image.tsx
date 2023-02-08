@@ -1,3 +1,4 @@
+
 //Note slightly different props syntax: we pass props
 //explicitly here by naming them
 
@@ -17,13 +18,26 @@ const CatImage : React.FC<CatImageProps> = (
     //JS parameters passed to an arrow function: these
     // define recognised props of the React FC
 
-    {image, altText}) => (
-
+    {image,
+     altText,
+     licenceUrl,
+     licenceType,
+     attributionName,
+     attributionUrl
+    }) => (
     <>
 
-    <img
-        className='card__image' src={image} alt={altText}
-    /> 
+    <img className="card__image" src={image} alt={altText}
+    />
+    <p className="card__text__small">
+        Image licensed under <a href={licenceUrl}>{licenceType}</a>
+        {attributionName && (
+            <>
+                &nbsp;by <a href={attributionUrl}>
+                    {attributionName} </a>
+            </>
+        )}
+    </p>
 
     </>   
 
