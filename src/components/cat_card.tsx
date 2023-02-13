@@ -112,9 +112,7 @@ const images = [
 	}
 ];
 
-//This is the interface used to render whatever is in
-// props and CatCard. Props is the data, CatCard delivers it.
-// Props is a single interface that could be called anything.
+
 
 const CatCard : React.FC<CatCardProps> = (props) => {
 
@@ -126,17 +124,19 @@ const CatCard : React.FC<CatCardProps> = (props) => {
                 <p className= "card__text" >{species}</p>
                 <p className= "card__text">{favFoods}</p>
                 <p className="card__text">{birthYear}</p>
-                    {catIndex < images.length && (
-                    <CatImage 
-                    image={images[catIndex].image} 
-                    altText={images[catIndex].altText}
-                    licenceType={images[catIndex].licenceType}
-                    licenceUrl={images[catIndex].licenceUrl}
-                    attributionName={images[catIndex].attributionName}
-                    attributionUrl={images[catIndex].attributionUrl}
-            /> )}
+                { catIndex < images.length && 
+					( <CatImage 
+						image={images[catIndex].image} 
+						altText={images[catIndex].altText}
+						licenceType={images[catIndex].licenceType}
+						licenceUrl={images[catIndex].licenceUrl}
+						attributionName={images[catIndex].attributionName}
+						attributionUrl={images[catIndex].attributionUrl}
+            			/> 
+					)
+				}
                  
-  </div>
+  		</div>
   ) 
 }; 
 
