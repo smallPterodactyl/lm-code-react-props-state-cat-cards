@@ -1,5 +1,6 @@
 import Dog from "../data/dog"
-import DogImageProps from "./dog_image"
+import DogImage from "./dog_image"
+
 
 
 const DogCard : React.FC<DogCardProps> = (dogProps) => {
@@ -10,7 +11,15 @@ const DogCard : React.FC<DogCardProps> = (dogProps) => {
             <p className= "card__text" >{dogProps.dogObject.species}</p>
             <p className= "card__text">{dogProps.dogObject.favFoods}</p>
             <p className="card__text">{dogProps.dogObject.birthYear}</p>
+            {(
+            
+            < DogImage imageID={dogProps.dogObject.imageID} 
+            />
+
+            )}
+            
         </div>
+        
     )
 }
 
