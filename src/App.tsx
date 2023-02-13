@@ -1,26 +1,29 @@
 //app framework
-import { useState } from 'react';
-import { isPropertySignature } from 'typescript';
-const { v4: uuidv4 } = require('uuid');
-//components
+import catData from './data/catData';
 import Cat from './data/cat';
 import CatCard from './components/cat_card';
-import catData from './data/catData';
-//styling
+
+import Dog from './data/dog';
+import DogCard from './components/dog_card';
+import dogData from './data/dog-data';
+
 import './App.css';
 import Navbar from './components/navbar';
 import Header from './components/header';
 import Footer from './components/footer';
 
-//data
+import { useState } from 'react';
+import { isPropertySignature } from 'typescript';
+
 
 function App(): JSX.Element {
 
-   /*Initial state is a big 'cats' array with the cat card shape */
-	const [ cats, setCats ] = 
-	useState <Array<Cat>> (catData);
+	//Set initial cat data	
+	const [ cats, setCats ] = useState <Array<Cat>> (catData);
+	const catCount: number = cats.length;
 
-	const catCount:number = cats.length;
+	//Set initial dog data	
+	const [ dogs ] = useState <Array<Dog>> (dogData);
 
 	return (
 		<>
@@ -43,6 +46,15 @@ function App(): JSX.Element {
 				  ))}
 				 
 				</div>
+
+				<div className='cards__wrapper'>
+
+					{ dogs.map ((dog) => (
+							<DogCard
+							dogObject={dog}					
+							/>	
+							))}	
+				</div>	
 
 			</main>
 			  
