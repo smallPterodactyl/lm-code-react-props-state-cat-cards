@@ -1,9 +1,10 @@
 
+//Image ID passed as a prop to link dog data to its corresponding image file
+
 const DogImage : React.FC <DogImageIDProp> = ({imageID})=> {
 
     const imageSource = require (`../assets/images/dogs/${ imageID }.png`);
 
-    
     return (
         <>
             <img 

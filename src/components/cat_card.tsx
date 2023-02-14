@@ -113,16 +113,17 @@ const images = [
 ];
 
 
-
 const CatCard : React.FC<CatCardProps> = (props) => {
 
-    const {name,species,favFoods,birthYear,catIndex}=props;
+    const {name,species,favFoods,birthYear,catIndex}=props
+	const favFoodsFormat = favFoods.join(', ');
+
 
     return ( 
         <div className="card">
             <h3 className= "card__text  card__header" >{name}</h3>
                 <p className= "card__text" >{species}</p>
-                <p className= "card__text">{favFoods}</p>
+                <p className= "card__text">{favFoodsFormat}</p>
                 <p className="card__text">{birthYear}</p>
                 { catIndex < images.length && 
 					( <CatImage 
@@ -147,7 +148,5 @@ const CatCard : React.FC<CatCardProps> = (props) => {
     birthYear: number;
     catIndex: number;
   } 
-
-
 
 export default CatCard;

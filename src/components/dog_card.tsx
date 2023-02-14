@@ -2,11 +2,8 @@ import Dog from "../data/dog"
 import DogImage from "./dog_image"
 
 
-
 const DogCard : React.FC<DogCardProps> = (dogProps) => {
 
-    const dogImagePath : string = '../assets/images/dog-data//d1519374.png';
- 
     return (
         <div className="card">
             <h3 className= "card__text  card__header" >{dogProps.dogObject.name}</h3>

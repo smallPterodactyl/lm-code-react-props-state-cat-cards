@@ -1,19 +1,20 @@
 //app framework
-import catData from './data/catData';
-import Cat from './data/cat';
-import CatCard from './components/cat_card';
+import { useState } from 'react';
 
-import Dog from './data/dog';
-import DogCard from './components/dog_card';
-import dogData from './data/dog-data';
-
+//styling framework
 import './App.css';
 import Navbar from './components/navbar';
 import Header from './components/header';
 import Footer from './components/footer';
 
-import { useState } from 'react';
-import { isPropertySignature } from 'typescript';
+//cat and dog components
+import catData from './data/catData';
+import Cat from './data/cat';
+import CatCard from './components/cat_card';
+
+import dogData from './data/dog-data';
+import Dog from './data/dog';
+import DogCard from './components/dog_card';
 
 
 function App(): JSX.Element {

@@ -1,7 +1,4 @@
 
-//Note slightly different props syntax: we pass props
-//explicitly here by naming them
-
 interface CatImageProps {
     image: string;
     altText: string;
@@ -35,8 +32,6 @@ const CatImage : React.FC<CatImageProps> = (
     </p>
 
     </>   
-
-
 );
 
 export default CatImage;
