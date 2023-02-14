@@ -148,23 +148,6 @@ const CatCard : React.FC<CatCardProps> = (props) => {
     catIndex: number;
   } 
 
-  
-/*
-  <div className="card">
-    <h3 className= "card__text  card__header" >{props.catObject.name}</h3>
-      <p className= "card__text" >{props.catObject.species}</p>
-      <p className= "card__text">{props.catObject.favFoods}</p>
-      <p className="card__text">{props.catObject.birthYear}</p>
 
-  </div>
-)
-
-  //This is a more concise interface to 'transport' Cat;
-  // it doesn't duplicate prop naming here, and keeps Cat definition
-  // in one file!
-  interface CatCardProps {
-    catObject:Cat;
-  }
-  */
 
 export default CatCard;
