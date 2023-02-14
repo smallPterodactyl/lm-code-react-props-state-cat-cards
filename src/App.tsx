@@ -51,6 +51,7 @@ function App(): JSX.Element {
 
 					{ dogs.map ((dog) => (
 							<DogCard
+							key={dog.id}
 							dogObject={dog}					
 							/>	
 							))}	
