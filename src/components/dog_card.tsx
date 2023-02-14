@@ -4,6 +4,8 @@ import DogImage from "./dog_image"
 
 
 const DogCard : React.FC<DogCardProps> = (dogProps) => {
+
+    const dogImagePath : string = '../assets/images/dog-data//d1519374.png';
  
     return (
         <div className="card">
@@ -13,7 +15,8 @@ const DogCard : React.FC<DogCardProps> = (dogProps) => {
             <p className="card__text">{dogProps.dogObject.birthYear}</p>
             {(
             
-            < DogImage imageID={dogProps.dogObject.imageID} 
+            < DogImage 
+                imageID={dogProps.dogObject.imageID}
             />
 
             )}
